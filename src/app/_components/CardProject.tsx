@@ -1,0 +1,136 @@
+"use client";
+import { Card } from "@/components/ui/card";
+import React, { MouseEvent } from "react";
+
+export default function CardProject() {
+  const projects = [
+    {
+      id: 1,
+      title: "Portfolio Website",
+      description:
+        "Personal developer portfolio showcasing web development skills, projects, and services.",
+      category: "Next.js",
+      image: "/soon.png",
+      tags: ["Portfolio", "Developer", "React"],
+    },
+    {
+      id: 2,
+      title: "iPhone UI Portfolio",
+      description:
+        "A creative portfolio presented as an iOS-style phone interface with smooth UI.",
+      category: "HTML/CSS/JS",
+      image: "/soon.png",
+      tags: ["Creative", "Portfolio", "iOS UI"],
+    },
+    {
+      id: 3,
+      title: "PulseNow",
+      description:
+        "Live cryptocurrency dashboard showing real-time prices and market data.",
+      category: "React",
+      image: "/soon.png",
+      tags: ["Crypto", "Dashboard", "Real-time"],
+    },
+    {
+      id: 4,
+      title: "Sarkari-Kam",
+      description:
+        "A civic service platform where users can share government-service experiences and helpful guides.",
+      category: "Next.js",
+      image: "/soon.png",
+      tags: ["Civic", "Community", "MongoDB"],
+    },
+    {
+      id: 5,
+      title: "FoodieCart",
+      description:
+        "A modern food ordering interface with menu cards, cart system, and checkout flow.",
+      category: "React",
+      image: "/soon.png",
+      tags: ["Food", "Cart", "E-commerce"],
+    },
+    {
+      id: 6,
+      title: "DevNotes",
+      description:
+        "A note-taking app for developers with markdown-style notes, categories, and local storage.",
+      category: "React",
+      image: "/soon.png",
+      tags: ["Notes", "Markdown", "LocalStorage"],
+    },
+  ];
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -6;
+    const rotateY = ((x - centerX) / centerX) * 6;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+  };
+
+  const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
+    e.currentTarget.style.transform =
+      "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
+  };
+
+  const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
+    e.currentTarget.style.transition =
+      "transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99), box-shadow 0.5s ease";
+  };
+
+  return (
+    <Card className="bg-[#1E1D1A] w-full py-10 md:py-20">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            onMouseEnter={handleMouseEnter}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              transition: "transform 0.1s ease-out, box-shadow 0.4s ease",
+              willChange: "transform",
+              transformStyle: "preserve-3d",
+            }}
+            className="group relative overflow-hidden rounded-[40px] bg-[#242321] shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
+          >
+            <div className="relative h-65 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-white text-xl hover:text-[#F2B861] font-bold">
+                  {project.title}
+                </h3>
+                <span className="bg-[#E9E7DC] text-[#161616] text-xs font-semibold px-3 py-1 rounded-full">
+                  {project.category}
+                </span>
+              </div>
+              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-[#1f1f1f] text-gray-400 text-xs px-3 py-1 hover:bg-[#493E2D] rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Card>
+  );
+}
