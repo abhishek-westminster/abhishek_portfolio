@@ -40,7 +40,7 @@ export default function CardProject() {
       description:
         "A civic service platform where users can share government-service experiences and helpful guides.",
       category: "Next.js",
-      image: "/soon.png",
+      image: "/sarkarikam.png",
       tags: ["Civic", "Community", "MongoDB"],
       liveUrl: "http://localhost:3001",
     },
@@ -107,7 +107,7 @@ export default function CardProject() {
             }}
             className="group relative block overflow-hidden rounded-[40px] bg-[#242321] cursor-pointer shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
           >
-            <div className="relative h-65 overflow-hidden">git status
+            <div className="relative h-65 overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
