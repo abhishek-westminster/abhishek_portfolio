@@ -107,7 +107,7 @@ export default function CardProject() {
             }}
             className="group relative block overflow-hidden rounded-[40px] bg-[#242321] cursor-pointer shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
           >
-            <div className="relative h-65 overflow-hidden">
+            <div className="relative h-65 overflow-hidden">git status
               <img
                 src={project.image}
                 alt={project.title}
@@ -116,7 +116,7 @@ export default function CardProject() {
             </div>
             <div className="p-6">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-white text-xl group-hover:text-[#F2B861] font-bold">
+                <h3 className="text-white text-xl font-bold transition-colors duration-300">
                   {project.title}
                 </h3>
                 <span className="bg-[#E9E7DC] text-[#161616] text-xs font-semibold px-3 py-1 rounded-full">
@@ -130,7 +130,7 @@ export default function CardProject() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-[#1f1f1f] text-gray-400 text-xs px-3 py-1 group-hover:bg-[#493E2D] rounded-full"
+                    className="bg-[#1f1f1f] text-gray-400 text-xs px-3 py-1 rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#493E2D] hover:text-white"
                   >
                     {tag}
                   </span>
