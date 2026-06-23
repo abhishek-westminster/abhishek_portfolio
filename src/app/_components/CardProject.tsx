@@ -12,6 +12,7 @@ export default function CardProject() {
       category: "Next.js",
       image: "/soon.png",
       tags: ["Portfolio", "Developer", "React"],
+      liveUrl: "https://portfolio-website-demo.com",
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export default function CardProject() {
       category: "HTML/CSS/JS",
       image: "/soon.png",
       tags: ["Creative", "Portfolio", "iOS UI"],
+      liveUrl: "https://iphone-ui-portfolio-demo.com",
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ export default function CardProject() {
       category: "React",
       image: "/soon.png",
       tags: ["Crypto", "Dashboard", "Real-time"],
+      liveUrl: "https://pulsenow-demo.com",
     },
     {
       id: 4,
@@ -39,6 +42,7 @@ export default function CardProject() {
       category: "Next.js",
       image: "/soon.png",
       tags: ["Civic", "Community", "MongoDB"],
+      liveUrl: "http://localhost:3001",
     },
     {
       id: 5,
@@ -48,6 +52,7 @@ export default function CardProject() {
       category: "React",
       image: "/soon.png",
       tags: ["Food", "Cart", "E-commerce"],
+      liveUrl: "https://foodiecart-demo.com",
     },
     {
       id: 6,
@@ -57,10 +62,11 @@ export default function CardProject() {
       category: "React",
       image: "/soon.png",
       tags: ["Notes", "Markdown", "LocalStorage"],
+      liveUrl: "https://devnotes-demo.com",
     },
   ];
 
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -72,12 +78,12 @@ export default function CardProject() {
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
   };
 
-  const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
+  const handleMouseLeave = (e: MouseEvent<HTMLElement>) => {
     e.currentTarget.style.transform =
       "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
   };
 
-  const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
+  const handleMouseEnter = (e: MouseEvent<HTMLElement>) => {
     e.currentTarget.style.transition =
       "transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99), box-shadow 0.5s ease";
   };
@@ -86,8 +92,11 @@ export default function CardProject() {
     <Card className="bg-[#161615] w-full py-10 md:py-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0">
         {projects.map((project) => (
-          <div
+          <a
             key={project.id}
+            href={project.liveUrl}
+            target="_blank"
+            rel="noreferrer"
             onMouseEnter={handleMouseEnter}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -96,7 +105,7 @@ export default function CardProject() {
               willChange: "transform",
               transformStyle: "preserve-3d",
             }}
-            className="group relative overflow-hidden rounded-[40px] bg-[#242321] shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
+            className="group relative block overflow-hidden rounded-[40px] bg-[#242321] cursor-pointer shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
           >
             <div className="relative h-65 overflow-hidden">
               <img
@@ -107,7 +116,7 @@ export default function CardProject() {
             </div>
             <div className="p-6">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-white text-xl hover:text-[#F2B861] font-bold">
+                <h3 className="text-white text-xl group-hover:text-[#F2B861] font-bold">
                   {project.title}
                 </h3>
                 <span className="bg-[#E9E7DC] text-[#161616] text-xs font-semibold px-3 py-1 rounded-full">
@@ -121,14 +130,14 @@ export default function CardProject() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-[#1f1f1f] text-gray-400 text-xs px-3 py-1 hover:bg-[#493E2D] rounded-full"
+                    className="bg-[#1f1f1f] text-gray-400 text-xs px-3 py-1 group-hover:bg-[#493E2D] rounded-full"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </Card>
