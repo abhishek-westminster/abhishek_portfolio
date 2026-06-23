@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/ui/search-bar";
 import { Glasses, SlidersHorizontal } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import FilterTab from "./FilterTab";
 
 export default function HeroSection() {
   const stats = [

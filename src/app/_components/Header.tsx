@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import FilterTab from "./FilterTab";
 
 import React from "react";
 
@@ -29,16 +29,8 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center bg-[#1E1E1E] h-11 gap-1 lg:gap-3 text-white rounded-2xl px-2 lg:px-4 text-sm">
-            {navItems.map((item) => (
-              <Link
-                className="hover:bg-[#292929] duration-300 ease-in-out transition rounded-2xl px-3 lg:px-4 py-1.5"
-                key={item.label}
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <div className="hidden md:block">
+            <FilterTab tabs={navItems} />
           </div>
 
           <Button className="hidden md:flex">Let&apos;s Talk</Button>
