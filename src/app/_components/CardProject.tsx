@@ -42,7 +42,7 @@ export default function CardProject() {
       category: "Next.js",
       image: "/sarkarikam.png",
       tags: ["Civic", "Community", "MongoDB"],
-      liveUrl: "https://sarkari-kam.vercel.app",
+      liveUrl: "https://vercel.com/abhishek-projects04/sarkarikam",
     },
     {
       id: 5,
