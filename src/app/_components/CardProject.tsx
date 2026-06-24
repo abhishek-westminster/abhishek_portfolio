@@ -94,7 +94,7 @@ export default function CardProject() {
 
   return (
     <Card className="bg-background w-full py-10 md:py-20 border-0">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 sm:px-6 lg:px-8">
         {projects.map((project) => (
           <a
             key={project.id}
@@ -111,7 +111,7 @@ export default function CardProject() {
             }}
             className="group relative block overflow-hidden rounded-[40px] bg-card cursor-pointer border border-border shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
           >
-            <div className="relative h-65 overflow-hidden">
+            <div className="relative h-[220px] sm:h-[240px] lg:h-[260px] overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
