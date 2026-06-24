@@ -42,7 +42,11 @@ export default function CardProject() {
       category: "Next.js",
       image: "/sarkarikam.png",
       tags: ["Civic", "Community", "MongoDB"],
-      liveUrl: "https://sarkarikam-pzuzs6jso-abhishek-projects04.vercel.app",
+      // TODO: Replace with public production URL from Vercel
+      // Current URL is a team-scoped preview that requires authentication (401)
+      // Go to Vercel Dashboard → Sarkari-Kam project → Settings → Deployment Protection
+      // Disable auth to get a public URL like: https://sarkari-kam.vercel.app
+      liveUrl: "https://sarkari-kam.vercel.app",
     },
     {
       id: 5,
