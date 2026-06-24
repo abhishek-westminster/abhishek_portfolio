@@ -46,7 +46,7 @@ export default function CardProject() {
       // Current URL is a team-scoped preview that requires authentication (401)
       // Go to Vercel Dashboard → Sarkari-Kam project → Settings → Deployment Protection
       // Disable auth to get a public URL like: https://sarkari-kam.vercel.app
-      liveUrl: "https://sarkari-kam.vercel.app",
+      liveUrl: "sarkarikam-pzuzs6jso-abhishek-projects04.vercel.app",
     },
     {
       id: 5,
