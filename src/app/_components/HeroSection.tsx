@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/ui/search-bar";
 import { Glasses, SlidersHorizontal } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import FilterTab from "./FilterTab";
 
 export default function HeroSection() {
   const stats = [
@@ -17,22 +15,22 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="w-full bg-[#161615]">
+      <div className="w-full bg-background">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 py-10 md:py-16 px-4 md:px-8">
           <div className="flex flex-col order-2 lg:order-1">
-            <div className="bg-[#1F1F1F] items-center gap-2 flex text-sm w-fit p-2 rounded-2xl text-white mt-5">
-              <Glasses className="text-[#22C55D] h-4 w-4" /> Available for new
+            <div className="bg-card items-center gap-2 flex text-sm w-fit p-2 rounded-2xl text-foreground mt-5">
+              <Glasses className="text-green-500 h-4 w-4" /> Available for new
               projects
             </div>
 
-            <h1 className="text-white flex flex-col gap-2 font-bold text-3xl md:text-5xl mt-6 md:mt-10">
+            <h1 className="text-foreground flex flex-col gap-2 font-bold text-3xl md:text-5xl mt-6 md:mt-10">
               Hello, I&apos;m
               <span className="text-[#F2B75F] font-bold text-4xl md:text-6xl">
                 Abhishek Mandal
               </span>
             </h1>
             <div className="w-full max-w-md h-1 bg-[#58462B] mt-2"></div>
-            <div className="text-[#A3A9B3] text-lg md:text-2xl my-5">
+            <div className="text-muted-foreground text-lg md:text-2xl my-5">
               Crafting beautiful, functional digital experiences that users love
               and businesses rely on.
             </div>
@@ -40,16 +38,21 @@ export default function HeroSection() {
             <div className="flex flex-wrap gap-8 md:gap-16">
               {stats.map((stat) => (
                 <div key={stat.value} className="text-center">
-                  <h3 className="text-white text-3xl md:text-4xl font-bold">
+                  <h3 className="text-foreground text-3xl md:text-4xl font-bold">
                     {stat.value}
                   </h3>
-                  <p className="text-gray-400 text-sm">{stat.label}</p>
+                  <p className="text-muted-foreground text-sm">{stat.label}</p>
                 </div>
               ))}
             </div>
             <div className="flex flex-wrap gap-4 mt-6">
-              <Button className="bg-[#EBAB4D] py-6">View my Work</Button>
-              <Button className="bg-[#1F1F1F] text-[#E9E7DC] py-6">
+              <Button className="bg-[#EBAB4D] text-black py-6">
+                View my Work
+              </Button>
+              <Button
+                variant="outline"
+                className="bg-card text-foreground py-6 border-border"
+              >
                 Learn more
               </Button>
             </div>
@@ -59,7 +62,7 @@ export default function HeroSection() {
             <Image
               width={400}
               height={400}
-              className="h-auto rounded-3xl object-cover w-full max-w-400px"
+              className="h-auto rounded-3xl object-cover w-full max-w-[400px] dark:invert"
               src="/window.svg"
               alt="Abhishek"
             />
@@ -79,7 +82,8 @@ export default function HeroSection() {
           {categories.map((categorie) => (
             <Button
               key={categorie}
-              className="rounded-2xl bg-[#1f1f1f] px-3 md:px-4 py-2 text-gray-400 text-xs md:text-sm my-3 md:my-6"
+              variant="outline"
+              className="rounded-2xl bg-card px-3 md:px-4 py-2 text-muted-foreground text-xs md:text-sm my-3 md:my-6 border-border"
             >
               {categorie}
             </Button>

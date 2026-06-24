@@ -44,7 +44,7 @@ export default function FilterTab({
   }
 
   return (
-    <div className={`flex items-center bg-[#1E1E1E] h-11 gap-1 text-white rounded-2xl px-2 ${className}`}>
+    <div className={`flex items-center bg-muted h-11 gap-1 text-foreground rounded-2xl px-2 ${className}`}>
       {tabs?.map((tab) => {
         const isActive = currentActive === tab.label;
         return (
@@ -54,8 +54,8 @@ export default function FilterTab({
             onClick={() => handleClick(tab.label)}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition duration-300 ${
               isActive
-                ? "text-[#F2B75F] bg-[#292929]"
-                : "text-white hover:bg-[#292929]"
+                ? "text-[#F2B75F] bg-accent"
+                : "text-foreground hover:bg-accent"
             }`}
           >
             {tab.label}

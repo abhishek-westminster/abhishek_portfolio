@@ -50,7 +50,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#1E1D1A] text-gray-400">
+      <footer className="bg-card text-muted-foreground border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-20">
           {/* Top footer */}
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
@@ -115,8 +115,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom footer */}
-        <div className="border-t border-white/10">
+      {/* Bottom footer */}
+      <div className="border-t border-border">
           <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between">
             <p className="text-base">
               © 2026 Abhishek Mandal. All rights reserved.

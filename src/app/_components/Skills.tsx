@@ -70,21 +70,21 @@ export default function Skills() {
 
   return (
     <>
-      <div className="bg-[#191919] w-full py-12 md:py-20">
+      <div className="bg-background w-full py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-sm font-semibold text-[#F2B75F] py-4 md:py-6">
               SKILL AND TECH STACK
             </h1>
-            <span className="font-bold text-2xl md:text-4xl text-white text-center">
+            <span className="font-bold text-2xl md:text-4xl text-foreground text-center">
               React, UI/UX, and modern frontend tools
             </span>
-            <div className="text-[#A3A9B3] py-4 md:py-6 max-w-2xl text-base md:text-lg text-center">
+            <div className="text-muted-foreground py-4 md:py-6 max-w-2xl text-base md:text-lg text-center">
               My day-to-day stack for building fast, clean, SEO-friendly web
               apps and mobile experiences: HTML, CSS, JavaScript, React, UI/UX
               design, and performance-first implementation.
             </div>
-            <Card className="bg-[#1E1D1A] w-full py-10 md:py-20">
+            <Card className="bg-card w-full py-10 md:py-20 border-0">
               <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0">
                 {skillGroups.map((group) => (
                   <div
@@ -97,9 +97,9 @@ export default function Skills() {
                       willChange: "transform",
                       transformStyle: "preserve-3d",
                     }}
-                    className="group relative overflow-hidden rounded-[40px] bg-[#242321] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_0_50px_rgba(192,192,192,0.35),0_30px_80px_rgba(0,0,0,0.55)]"
+                    className="group relative overflow-hidden rounded-[40px] bg-card border border-border p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_0_50px_rgba(192,192,192,0.35),0_30px_80px_rgba(0,0,0,0.55)]"
                   >
-                    <h2 className="text-white text-2xl font-bold mb-6">
+                    <h2 className="text-foreground text-2xl font-bold mb-6">
                       {group.title}
                     </h2>
 
@@ -107,7 +107,7 @@ export default function Skills() {
                       {group.skills.map((skills) => (
                         <span
                           key={skills}
-                          className="cursor-pointer text-white text-sm bg-[#1F1F1F] hover:bg-[#4B3F2E] transition-colors duration-300 px-4 py-2 rounded-full"
+                          className="cursor-pointer text-foreground text-sm bg-muted hover:bg-[#4B3F2E] hover:text-white transition-colors duration-300 px-4 py-2 rounded-full"
                         >
                           {skills}
                         </span>
