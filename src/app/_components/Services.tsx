@@ -52,7 +52,7 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#161615] px-6 py-24">
+    <section className="bg-[#161615] px-4 py-12 sm:px-6 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section heading */}
         <div className="mx-auto max-w-3xl text-center">
@@ -60,50 +60,50 @@ export default function ServicesSection() {
             Services
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Design + Development for modern web & mobile
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-400">
+          <p className="mt-4 text-base leading-7 text-gray-400 sm:mt-6 sm:text-lg sm:leading-8">
             End-to-end UI/UX design and frontend development for responsive websites,
             React web apps, and mobile-friendly interfaces.
           </p>
         </div>
 
         {/* Cards grid */}
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 lg:mt-16 lg:gap-8">
           {services.map((service) => {
             const Icon = service.icon
 
             return (
               <div
                 key={service.id}
-                className="rounded-[36px] bg-[#1F1F1F] p-10 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+                className="rounded-[28px] bg-[#1F1F1F] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:rounded-[32px] sm:p-7 lg:rounded-[36px] lg:p-10"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#5A4528] text-[#F2B75F]">
-                  <Icon className="h-7 w-7" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#5A4528] text-[#F2B75F] sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
                 </div>
 
-                <h3 className="mt-8 text-3xl font-bold text-white">
+                <h3 className="mt-6 text-2xl font-bold leading-tight text-white lg:mt-8 lg:text-3xl">
                   {service.title}
                 </h3>
 
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-4 text-base leading-7 text-gray-400 sm:text-lg sm:leading-8 lg:mt-6">
                   {service.description}
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-wrap gap-2.5 lg:mt-8 lg:gap-3">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[#2A2A2A] px-5 py-2 text-sm text-gray-400 hover:bg-[#493E2D]"
+                      className="rounded-full bg-[#2A2A2A] px-3.5 py-2 text-sm text-gray-400 hover:bg-[#493E2D] sm:px-5"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <button className="mt-10 flex items-center gap-3 text-lg font-medium text-[#F2B75F] transition-all duration-300 hover:gap-5">
+                <button className="mt-7 flex items-center gap-3 text-base font-medium text-[#F2B75F] transition-all duration-300 hover:gap-5 sm:text-lg lg:mt-10">
                   Learn more
                   <ArrowRight className="h-5 w-5" />
                 </button>

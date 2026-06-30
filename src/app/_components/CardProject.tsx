@@ -1,5 +1,6 @@
 "use client";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import React, { MouseEvent } from "react";
 
 export default function CardProject() {
@@ -93,8 +94,8 @@ export default function CardProject() {
   };
 
   return (
-    <Card className="bg-background w-full py-10 md:py-20 border-0">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 sm:px-6 lg:px-8">
+    <Card className="w-full border-0 bg-background py-8 sm:py-10 md:py-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 sm:gap-6 sm:px-6 md:gap-8 lg:grid-cols-3 lg:px-8">
         {projects.map((project) => (
           <a
             key={project.id}
@@ -109,32 +110,34 @@ export default function CardProject() {
               willChange: "transform",
               transformStyle: "preserve-3d",
             }}
-            className="group relative block overflow-hidden rounded-[40px] bg-card cursor-pointer border border-border shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)]"
-          >
-            <div className="relative h-[220px] sm:h-[240px] lg:h-[260px] overflow-hidden">
-              <img
+            className="group relative block overflow-hidden rounded-[28px] border border-border bg-card shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)] sm:rounded-[34px] lg:rounded-[40px]"
+            >
+            <div className="relative aspect-[4/3] overflow-hidden sm:h-[240px] sm:aspect-auto lg:h-[260px]">
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-foreground text-xl font-bold transition-colors duration-300">
+            <div className="p-5 sm:p-6">
+              <div className="mb-3 flex items-start justify-between gap-3">
+                <h3 className="min-w-0 text-lg font-bold text-foreground transition-colors duration-300 sm:text-xl">
                   {project.title}
                 </h3>
-                <span className="bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="shrink-0 rounded-full bg-foreground px-2.5 py-1 text-[0.7rem] font-semibold text-background sm:px-3 sm:text-xs">
                   {project.category}
                 </span>
               </div>
-              <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+              <p className="mb-4 line-clamp-3 text-sm leading-6 text-muted-foreground sm:line-clamp-2">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-muted text-muted-foreground text-xs px-3 py-1 rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#493E2D] hover:text-white"
+                    className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground transition-colors duration-300 hover:bg-[#493E2D] hover:text-white"
                   >
                     {tag}
                   </span>

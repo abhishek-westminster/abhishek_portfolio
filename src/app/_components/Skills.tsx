@@ -1,6 +1,6 @@
 "use client";
 import { Card } from "@/components/ui/card";
-import React, { useRef, MouseEvent } from "react";
+import React, { MouseEvent } from "react";
 
 export default function Skills() {
   const skillGroups = [
@@ -70,22 +70,22 @@ export default function Skills() {
 
   return (
     <>
-      <div className="bg-background w-full py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="w-full bg-background py-10 sm:py-12 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-sm font-semibold text-[#F2B75F] py-4 md:py-6">
+            <h1 className="py-3 text-center text-sm font-semibold text-[#F2B75F] md:py-6">
               SKILL AND TECH STACK
             </h1>
-            <span className="font-bold text-2xl md:text-4xl text-foreground text-center">
+            <span className="text-center text-2xl font-bold leading-tight text-foreground md:text-4xl">
               React, UI/UX, and modern frontend tools
             </span>
-            <div className="text-muted-foreground py-4 md:py-6 max-w-2xl text-base md:text-lg text-center">
+            <div className="max-w-2xl py-4 text-center text-base leading-7 text-muted-foreground md:py-6 md:text-lg md:leading-8">
               My day-to-day stack for building fast, clean, SEO-friendly web
               apps and mobile experiences: HTML, CSS, JavaScript, React, UI/UX
               design, and performance-first implementation.
             </div>
-            <Card className="bg-card w-full py-10 md:py-20 border-0">
-              <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 md:px-0">
+            <Card className="w-full border-0 bg-card py-6 sm:py-10 md:py-20">
+              <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 px-4 sm:gap-6 md:grid-cols-2 md:gap-8 md:px-0 lg:grid-cols-3">
                 {skillGroups.map((group) => (
                   <div
                     key={group.title}
@@ -97,17 +97,17 @@ export default function Skills() {
                       willChange: "transform",
                       transformStyle: "preserve-3d",
                     }}
-                    className="group relative overflow-hidden rounded-[40px] bg-card border border-border p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_0_50px_rgba(192,192,192,0.35),0_30px_80px_rgba(0,0,0,0.55)]"
+                    className="group relative overflow-hidden rounded-[28px] border border-border bg-card p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_0_50px_rgba(192,192,192,0.35),0_30px_80px_rgba(0,0,0,0.55)] sm:rounded-[34px] sm:p-6 lg:rounded-[40px] lg:p-8"
                   >
-                    <h2 className="text-foreground text-2xl font-bold mb-6">
+                    <h2 className="mb-5 text-xl font-bold text-foreground sm:mb-6 sm:text-2xl">
                       {group.title}
                     </h2>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2.5 sm:gap-3">
                       {group.skills.map((skills) => (
                         <span
                           key={skills}
-                          className="cursor-pointer text-foreground text-sm bg-muted hover:bg-[#4B3F2E] hover:text-white transition-colors duration-300 px-4 py-2 rounded-full"
+                          className="rounded-full bg-muted px-3 py-2 text-sm text-foreground transition-colors duration-300 hover:bg-[#4B3F2E] hover:text-white sm:px-4"
                         >
                           {skills}
                         </span>

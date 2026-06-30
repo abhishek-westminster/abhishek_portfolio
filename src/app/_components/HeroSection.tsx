@@ -14,18 +14,18 @@ export default function HeroSection() {
   const categories = ["Featured", "Web", "Mobile", "UI/UX", "Open Source"];
 
   return (
-    <section className="w-full bg-background">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:grid-cols-2 lg:items-center">
+    <section className="w-full overflow-x-clip bg-background">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-10 md:py-14 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8 lg:py-16">
         {/* Text content */}
-        <div className="order-2 flex flex-col gap-4 lg:order-1">
+        <div className="order-2 flex min-w-0 flex-col gap-3.5 sm:gap-4 lg:order-1">
           <span className="inline-flex w-fit items-center gap-2 rounded-2xl bg-card px-3 py-1.5 text-xs sm:text-sm text-foreground">
             <Glasses className="h-4 w-4 text-green-500" aria-hidden="true" />
             Available for new projects
           </span>
 
-          <h1 className="flex flex-col gap-1 font-bold text-foreground text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 className="flex min-w-0 flex-col gap-1 break-words font-bold leading-tight text-foreground text-[clamp(1.75rem,8vw,2.25rem)] sm:text-4xl lg:text-5xl xl:text-6xl">
             <span>Hello, I&apos;m</span>
-            <span className="text-[#F2B75F] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
+            <span className="text-[#F2B75F] leading-[0.98] text-[clamp(2.15rem,10.5vw,3rem)] sm:text-5xl lg:text-6xl xl:text-7xl">
               Abhishek Mandal
             </span>
           </h1>
@@ -38,9 +38,9 @@ export default function HeroSection() {
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-6 sm:gap-10 lg:gap-16 pt-2">
+          <div className="grid grid-cols-3 gap-3 pt-2 sm:flex sm:flex-wrap sm:gap-10 lg:gap-16">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center sm:text-left">
+              <div key={stat.label} className="min-w-0 text-center sm:text-left">
                 <h3 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold">
                   {stat.value}
                 </h3>
@@ -52,13 +52,13 @@ export default function HeroSection() {
           </div>
 
           {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-            <Button className="bg-[#EBAB4D] text-black py-6 px-6 w-full sm:w-auto">
+          <div className="flex flex-col gap-3 pt-2 min-[430px]:flex-row sm:gap-4">
+            <Button className="w-full bg-[#EBAB4D] px-5 py-5 text-black min-[430px]:w-auto sm:px-6 sm:py-6">
               View my Work
             </Button>
             <Button
               variant="outline"
-              className="bg-card text-foreground py-6 px-6 border-border w-full sm:w-auto"
+              className="w-full border-border bg-card px-5 py-5 text-foreground min-[430px]:w-auto sm:px-6 sm:py-6"
             >
               Learn more
             </Button>
@@ -66,12 +66,12 @@ export default function HeroSection() {
         </div>
 
         {/* Image */}
-        <div className="order-1 flex justify-center lg:justify-end lg:order-2">
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <Image
-            width={400}
-            height={400}
-            className="h-auto w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] rounded-3xl object-cover dark:invert"
-            src="/window.svg"
+            width={1024}
+            height={1536}
+            className="aspect-square w-full max-w-[180px] rounded-3xl object-cover min-[380px]:max-w-[210px] sm:max-w-[300px] lg:max-w-[400px]"
+            src="/abhishek.png"
             alt="Abhishek Mandal - Frontend Developer"
             priority
           />
@@ -79,16 +79,16 @@ export default function HeroSection() {
       </div>
 
       {/* Search + filter row */}
-      <div className="mx-auto flex max-w-5xl flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-5xl flex-col items-stretch justify-center gap-3 px-4 sm:flex-row sm:items-center sm:gap-6 sm:px-6 lg:px-8">
         <SearchBar className="w-full focus-within:border-yellow-600 focus-within:ring-2 focus-within:ring-yellow-400/20" />
-        <Button className="flex items-center justify-center gap-2 rounded-2xl bg-[#F4F1E8] px-6 py-6 text-black font-medium shrink-0 w-full sm:w-auto">
+        <Button className="flex w-full shrink-0 items-center justify-center gap-2 rounded-2xl bg-[#F4F1E8] px-5 py-5 font-medium text-black sm:w-auto sm:px-6 sm:py-6">
           <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
           <span>Filter</span>
         </Button>
       </div>
 
       {/* Category chips */}
-      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 px-4 sm:px-6 lg:px-8 mt-6 mb-2">
+      <div className="mb-2 mt-5 flex flex-wrap justify-center gap-2 px-4 sm:mt-6 sm:gap-3 sm:px-6 lg:gap-4 lg:px-8">
         {categories.map((categorie) => (
           <Button
             key={categorie}
