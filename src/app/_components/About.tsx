@@ -2,9 +2,8 @@ import Image from "next/image";
 
 export default function About() {
   const yearexpriences = [
-    { value: "7+", line1: "Years", line2: "Experience" },
-    { value: "50+", line1: "Projects", line2: "Delivered" },
-    { value: "30+", line1: "Happy", line2: "Clients" },
+    { value: "2", line1: "Years", line2: "Experience" },
+    { value: "15+", line1: "Projects", line2: "Delivered" },
     { value: "100", line1: "Success", line2: "Rate" },
   ];
 
@@ -12,17 +11,20 @@ export default function About() {
     <>
       <div className="w-full bg-background py-10 sm:py-12 md:py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 py-6 sm:px-6 md:gap-10 md:px-8 md:py-16 lg:flex-row">
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <Image
-              width={1024}
-              height={1536}
-              className="aspect-square w-full max-w-[220px] rounded-3xl object-cover sm:max-w-[300px] lg:max-w-[400px]"
-              src="/abhishek.png"
-              alt="Abhishek"
-            />
+          <div className="flex w-full justify-center lg:w-1/2 lg:justify-start">
+            <div className="aspect-square w-full max-w-[240px] overflow-hidden rounded-3xl sm:max-w-[320px] lg:max-w-[400px]">
+              <Image
+                width={1024}
+                height={1536}
+                className="h-full w-full object-cover object-[50%_35%]"
+                src="/abhishek.png"
+                alt="Abhishek"
+                loading="eager"
+              />
+            </div>
           </div>
 
-          <div className="w-full lg:w-1/2 flex flex-col">
+          <div className="flex w-full flex-col lg:w-1/2">
             <h1 className="py-3 text-sm font-semibold text-[#F2B75F] sm:py-4">
               ABOUT ABHISHEK MANDAL
             </h1>
@@ -49,16 +51,20 @@ export default function About() {
               </span>
             </p>
 
-            <div className="grid grid-cols-2 gap-3 py-5 min-[430px]:flex min-[430px]:flex-row min-[430px]:flex-wrap md:gap-4">
-              {yearexpriences.map((yearexprience) => (
+            <div className="grid grid-cols-1 gap-3 py-5 min-[360px]:grid-cols-2 md:grid-cols-3 md:gap-4">
+              {yearexpriences.map((yearexprience, index) => (
                 <div
-                  className="flex h-28 w-full flex-col items-center justify-center rounded-3xl border border-border bg-card min-[430px]:w-28 md:h-32 md:w-32"
+                  className={`flex min-h-28 w-full flex-col items-center justify-center rounded-3xl border border-border bg-card px-4 py-5 md:min-h-32 ${
+                    index === yearexpriences.length - 1
+                      ? "min-[360px]:col-span-2 min-[360px]:mx-auto min-[360px]:max-w-[220px] md:col-span-1 md:max-w-none"
+                      : ""
+                  }`}
                   key={yearexprience.value}
                 >
-                  <p className="text-center text-3xl md:text-4xl font-semibold text-[#F2B75F]">
+                  <p className="text-center text-3xl font-semibold text-[#F2B75F] md:text-4xl">
                     {yearexprience.value}
                   </p>
-                  <h1 className="text-muted-foreground text-xs md:text-sm text-center mt-2 leading-tight">
+                  <h1 className="text-muted-foreground mt-2 text-center text-xs leading-tight md:text-sm">
                     <span className="block">{yearexprience.line1}</span>
                     <span className="block">{yearexprience.line2}</span>
                   </h1>
