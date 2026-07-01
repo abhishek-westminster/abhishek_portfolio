@@ -52,7 +52,7 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#161615] px-4 py-12 sm:px-6 sm:py-16 lg:py-24">
+    <section className="bg-background px-4 py-12 sm:px-6 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section heading */}
         <div className="mx-auto max-w-3xl text-center">
@@ -60,11 +60,11 @@ export default function ServicesSection() {
             Services
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-foreground sm:text-4xl md:text-5xl">
             Design + Development for modern web & mobile
           </h2>
 
-          <p className="mt-4 text-base leading-7 text-gray-400 sm:mt-6 sm:text-lg sm:leading-8">
+          <p className="mt-4 text-base leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8">
             End-to-end UI/UX design and frontend development for responsive websites,
             React web apps, and mobile-friendly interfaces.
           </p>
@@ -78,17 +78,17 @@ export default function ServicesSection() {
             return (
               <div
                 key={service.id}
-                className="rounded-[28px] bg-[#1F1F1F] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:rounded-[32px] sm:p-7 lg:rounded-[36px] lg:p-10"
+                className="rounded-[28px] bg-card p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:rounded-[32px] sm:p-7 lg:rounded-[36px] lg:p-10"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#5A4528] text-[#F2B75F] sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted text-[#F2B75F] sm:h-14 sm:w-14 lg:h-16 lg:w-16">
                   <Icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold leading-tight text-white lg:mt-8 lg:text-3xl">
+                <h3 className="mt-6 text-2xl font-bold leading-tight text-foreground lg:mt-8 lg:text-3xl">
                   {service.title}
                 </h3>
 
-                <p className="mt-4 text-base leading-7 text-gray-400 sm:text-lg sm:leading-8 lg:mt-6">
+                <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8 lg:mt-6">
                   {service.description}
                 </p>
 
@@ -96,7 +96,7 @@ export default function ServicesSection() {
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[#2A2A2A] px-3.5 py-2 text-sm text-gray-400 hover:bg-[#493E2D] sm:px-5"
+                      className="rounded-full bg-muted px-3.5 py-2 text-sm text-muted-foreground hover:bg-accent sm:px-5"
                     >
                       {tag}
                     </span>

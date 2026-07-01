@@ -3,11 +3,12 @@ import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/ui/search-bar";
 import { Glasses, SlidersHorizontal } from "lucide-react";
 import Image from "next/image";
+import SkillsMarquee from "./SkillsMarquee";
 
 export default function HeroSection() {
   const stats = [
-    { value: "7+", label: "Years Experience" },
-    { value: "50+", label: "Projects Delivered" },
+    { value: "2+", label: "Years Experience" },
+    { value: "15+", label: "Projects Delivered" },
     { value: "30+", label: "Happy Clients" },
   ];
 
@@ -40,7 +41,10 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-1 pt-1 sm:flex sm:flex-wrap sm:gap-10 lg:gap-16">
             {stats.map((stat) => (
-              <div key={stat.label} className="min-w-0 text-center sm:text-left">
+              <div
+                key={stat.label}
+                className="min-w-0 text-center sm:text-left"
+              >
                 <h3 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold">
                   {stat.value}
                 </h3>
@@ -65,19 +69,12 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Image */}
-        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-          <Image
-            width={1024}
-            height={1536}
-            className="hero-img-max aspect-square w-full rounded-3xl object-cover"
-            src="/abhishek.png"
-            alt="Abhishek Mandal - Frontend Developer"
-            priority
-          />
+        {/* Skills Marquee */}
+        <div className="order-1 flex items-center justify-center lg:order-2">
+          <SkillsMarquee />
         </div>
+        
       </div>
-
 
       {/* Search + filter row */}
       <div className="mx-auto flex max-w-5xl flex-col items-stretch justify-center gap-2 px-4 sm:flex-row sm:items-center sm:gap-6 sm:px-6 lg:px-8">

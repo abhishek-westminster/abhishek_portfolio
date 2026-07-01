@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function About() {
   const yearexpriences = [
     { value: "2", line1: "Years", line2: "Experience" },
@@ -10,21 +8,8 @@ export default function About() {
   return (
     <>
       <div className="w-full bg-background py-10 sm:py-12 md:py-20">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 py-6 sm:px-6 md:gap-10 md:px-8 md:py-16 lg:flex-row">
-          <div className="flex w-full justify-center lg:w-1/2 lg:justify-start">
-            <div className="aspect-square w-full max-w-60 overflow-hidden rounded-3xl sm:max-w-80 lg:max-w-100">
-              <Image
-                width={1024}
-                height={1536}
-                className="h-full w-full object-cover object-[50%_35%]"
-                src="/abhishek.png"
-                alt="Abhishek"
-                loading="eager"
-              />
-            </div>
-          </div>
-
-          <div className="flex w-full flex-col lg:w-1/2">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-6 text-center sm:px-6 md:px-8 md:py-16">
+          <div className="flex w-full max-w-5xl flex-col items-center">
             <h1 className="py-3 text-sm font-semibold text-[#F2B75F] sm:py-4">
               ABOUT ABHISHEK MANDAL
             </h1>
@@ -32,7 +17,7 @@ export default function About() {
               Frontend & Mobile Developer in Kathmandu building modern UI
             </h2>
 
-            <p className="py-3 text-base leading-7 text-muted-foreground sm:py-4 md:text-lg md:leading-relaxed">
+            <p className="w-full max-w-5xl py-3 text-base leading-7 text-muted-foreground sm:py-4 md:text-lg md:leading-relaxed">
               I&apos;m a frontend developer and UI/UX designer with a strong
               focus on building fast, clean, and modern digital experiences. I
               blend design thinking with hands-on development to turn ideas
@@ -51,12 +36,12 @@ export default function About() {
               </span>
             </p>
 
-            <div className="grid grid-cols-1 gap-3 py-5 min-[360px]:grid-cols-2 md:grid-cols-3 md:gap-4">
+            <div className="grid w-full max-w-3xl grid-cols-1 gap-3 py-5 min-[360px]:grid-cols-2 md:grid-cols-3 md:gap-4">
               {yearexpriences.map((yearexprience, index) => (
                 <div
-                  className={`flex min-h-28 w-full flex-col items-center justify-center rounded-3xl border border-border bg-card px-4 py-5 md:min-h-32 ${
+                  className={`flex min-h-24 w-full flex-col items-center justify-center rounded-3xl border border-border bg-card px-3 py-4 md:min-h-28 ${
                     index === yearexpriences.length - 1
-                      ? "min-[360px]:col-span-2 min-[360px]:mx-auto min-[360px]:max-w-55 md:col-span-1 md:max-w-none"
+                      ? "min-[360px]:col-span-2 min-[360px]:mx-auto min-[360px]:max-w-52 md:col-span-1 md:max-w-none"
                       : ""
                   }`}
                   key={yearexprience.value}
