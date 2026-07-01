@@ -94,8 +94,8 @@ export default function CardProject() {
   };
 
   return (
-    <Card className="w-full border-0 bg-background py-8 sm:py-10 md:py-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 sm:gap-6 sm:px-6 md:gap-8 lg:grid-cols-3 lg:px-8">
+    <Card className="w-full border-0 bg-background py-6 sm:py-10 md:py-20">
+      <div className="mx-auto grid w-full max-w-[360px] grid-cols-1 gap-4 px-4 sm:max-w-6xl sm:grid-cols-2 sm:gap-6 sm:px-6 md:gap-8 lg:grid-cols-3 lg:px-6">
         {projects.map((project) => (
           <a
             key={project.id}
@@ -110,9 +110,9 @@ export default function CardProject() {
               willChange: "transform",
               transformStyle: "preserve-3d",
             }}
-            className="group relative block overflow-hidden rounded-[28px] border border-border bg-card shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)] sm:rounded-[34px] lg:rounded-[40px]"
+            className="group relative mx-auto block w-full overflow-hidden rounded-[20px] border border-border bg-card shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)] sm:max-w-none sm:rounded-[34px] lg:rounded-[40px]"
             >
-            <div className="relative aspect-[4/3] overflow-hidden sm:h-[240px] sm:aspect-auto lg:h-[260px]">
+            <div className="relative aspect-video overflow-hidden sm:h-[240px] sm:aspect-auto lg:h-[260px]">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -121,23 +121,23 @@ export default function CardProject() {
                 className="object-cover"
               />
             </div>
-            <div className="p-5 sm:p-6">
-              <div className="mb-3 flex items-start justify-between gap-3">
-                <h3 className="min-w-0 text-lg font-bold text-foreground transition-colors duration-300 sm:text-xl">
+            <div className="p-4 sm:p-6">
+              <div className="mb-2 flex items-start justify-between gap-2 sm:mb-3 sm:gap-3">
+                <h3 className="min-w-0 text-base font-bold text-foreground transition-colors duration-300 sm:text-xl">
                   {project.title}
                 </h3>
-                <span className="shrink-0 rounded-full bg-foreground px-2.5 py-1 text-[0.7rem] font-semibold text-background sm:px-3 sm:text-xs">
+                <span className="shrink-0 rounded-full bg-foreground px-2 py-0.5 text-[0.65rem] font-semibold text-background sm:px-3 sm:py-1 sm:text-xs">
                   {project.category}
                 </span>
               </div>
-              <p className="mb-4 line-clamp-3 text-sm leading-6 text-muted-foreground sm:line-clamp-2">
+              <p className="mb-3 line-clamp-2 text-xs leading-5 text-muted-foreground sm:mb-4 sm:text-sm sm:leading-6">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground transition-colors duration-300 hover:bg-[#493E2D] hover:text-white"
+                    className="rounded-full bg-muted px-2.5 py-0.5 text-[0.7rem] text-muted-foreground transition-colors duration-300 hover:bg-[#493E2D] hover:text-white sm:px-3 sm:py-1 sm:text-xs"
                   >
                     {tag}
                   </span>
