@@ -15,17 +15,17 @@ export default function HeroSection() {
 
   return (
     <section className="w-full overflow-x-clip bg-background">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-10 md:py-14 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8 lg:py-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-4 py-4 sm:gap-8 sm:px-6 sm:py-10 md:py-14 lg:grid-cols-2 lg:items-center lg:gap-12 lg:px-8 lg:py-16">
         {/* Text content */}
-        <div className="order-2 flex min-w-0 flex-col gap-3.5 sm:gap-4 lg:order-1">
+        <div className="order-2 flex min-w-0 flex-col gap-2 sm:gap-4 lg:order-1">
           <span className="inline-flex w-fit items-center gap-2 rounded-2xl bg-card px-3 py-1.5 text-xs sm:text-sm text-foreground">
             <Glasses className="h-4 w-4 text-green-500" aria-hidden="true" />
             Available for new projects
           </span>
 
-          <h1 className="flex min-w-0 flex-col gap-1 text-balance font-bold leading-tight text-foreground text-[clamp(1.75rem,8vw,2.25rem)] sm:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 className="flex min-w-0 flex-col gap-1 text-balance font-bold leading-tight text-foreground text-lg sm:text-4xl lg:text-5xl xl:text-6xl">
             <span>Hello, I&apos;m</span>
-            <span className="text-[#F2B75F] leading-[0.98] text-[clamp(2.15rem,10.5vw,3rem)] sm:text-5xl lg:text-6xl xl:text-7xl">
+            <span className="text-[#F2B75F] leading-[0.98] text-2xl sm:text-5xl lg:text-6xl xl:text-7xl">
               Abhishek Mandal
             </span>
           </h1>
@@ -38,7 +38,7 @@ export default function HeroSection() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-3 pt-2 sm:flex sm:flex-wrap sm:gap-10 lg:gap-16">
+          <div className="grid grid-cols-3 gap-1 pt-1 sm:flex sm:flex-wrap sm:gap-10 lg:gap-16">
             {stats.map((stat) => (
               <div key={stat.label} className="min-w-0 text-center sm:text-left">
                 <h3 className="text-foreground text-2xl sm:text-3xl lg:text-4xl font-bold">
@@ -70,7 +70,7 @@ export default function HeroSection() {
           <Image
             width={1024}
             height={1536}
-            className="aspect-square w-full max-w-[180px] rounded-3xl object-cover min-[380px]:max-w-[210px] sm:max-w-[300px] lg:max-w-[400px]"
+            className="hero-img-max aspect-square w-full rounded-3xl object-cover"
             src="/abhishek.png"
             alt="Abhishek Mandal - Frontend Developer"
             priority
@@ -78,8 +78,9 @@ export default function HeroSection() {
         </div>
       </div>
 
+
       {/* Search + filter row */}
-      <div className="mx-auto flex max-w-5xl flex-col items-stretch justify-center gap-3 px-4 sm:flex-row sm:items-center sm:gap-6 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-5xl flex-col items-stretch justify-center gap-2 px-4 sm:flex-row sm:items-center sm:gap-6 sm:px-6 lg:px-8">
         <SearchBar className="w-full focus-within:border-yellow-600 focus-within:ring-2 focus-within:ring-yellow-400/20" />
         <Button className="flex w-full shrink-0 items-center justify-center gap-2 rounded-2xl bg-[#F4F1E8] px-5 py-5 font-medium text-black sm:w-auto sm:px-6 sm:py-6">
           <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
@@ -88,7 +89,7 @@ export default function HeroSection() {
       </div>
 
       {/* Category chips */}
-      <div className="mb-2 mt-5 flex flex-wrap justify-center gap-2 px-4 sm:mt-6 sm:gap-3 sm:px-6 lg:gap-4 lg:px-8">
+      <div className="mb-2 mt-3 flex flex-wrap justify-center gap-2 px-4 sm:mt-6 sm:gap-3 sm:px-6 lg:gap-4 lg:px-8">
         {categories.map((categorie) => (
           <Button
             key={categorie}

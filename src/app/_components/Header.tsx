@@ -20,7 +20,7 @@ export default function Header() {
     <header className="w-full bg-card border-b border-border sticky top-0 z-50">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:h-18 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex min-w-0 max-w-[58vw] items-center gap-2 sm:max-w-none">
+        <Link href="/" className="flex min-w-0 max-w-[60vw] items-center gap-2 sm:max-w-none">
           <Avatar className="h-8 w-8 sm:h-10 sm:w-10 shrink-0">
             <AvatarImage src="" alt="Abhishek Mandal" />
             <AvatarFallback className="bg-muted text-foreground text-xs sm:text-sm">

@@ -1,14 +1,14 @@
 export default function FeatureSection() {
   return (
     <>
-      <div className="w-full bg-[#1E1D1A] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="w-full bg-[#1E1D1A] px-4 py-8 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto flex max-w-3xl flex-col justify-center gap-3 text-center sm:gap-4">
+          <div className="mx-auto flex max-w-3xl flex-col justify-center gap-2 text-center sm:gap-4">
             <h1 className="text-sm font-semibold uppercase text-[#F2B75F]">
               featured projects
             </h1>
 
-            <h2 className="text-3xl font-bold leading-tight text-[#E9E7DC] sm:text-4xl">
+            <h2 className="text-2xl font-bold leading-tight text-[#E9E7DC] sm:text-4xl">
               Selected work by Abhishek mandal
             </h2>
 

@@ -125,6 +125,25 @@
     @apply overflow-x-hidden bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply overflow-x-hidden font-sans;
+  }
+}
+
+.hero-img-max {
+  max-width: 150px !important;
+}
+@media (min-width: 380px) {
+  .hero-img-max {
+    max-width: 180px !important;
+  }
+}
+@media (min-width: 640px) {
+  .hero-img-max {
+    max-width: 280px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-img-max {
+    max-width: 400px !important;
   }
 }

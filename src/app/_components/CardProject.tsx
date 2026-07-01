@@ -94,8 +94,8 @@ export default function CardProject() {
   };
 
   return (
-    <Card className="w-full border-0 bg-background py-6 sm:py-10 md:py-20">
-      <div className="mx-auto grid w-full max-w-[360px] grid-cols-1 gap-4 px-4 sm:max-w-6xl sm:grid-cols-2 sm:gap-6 sm:px-6 md:gap-8 lg:grid-cols-3 lg:px-6">
+    <Card className="w-full border-0 bg-background py-4 sm:py-10 md:py-20">
+      <div className="mx-auto grid w-full grid-cols-1 gap-4 px-4 sm:max-w-6xl sm:grid-cols-2 sm:gap-6 sm:px-6 md:gap-8 lg:grid-cols-3 lg:px-6">
         {projects.map((project) => (
           <a
             key={project.id}
@@ -112,7 +112,7 @@ export default function CardProject() {
             }}
             className="group relative mx-auto block w-full overflow-hidden rounded-[20px] border border-border bg-card shadow-[inset_0_0_0_0_rgba(192,192,192,0)] hover:shadow-[inset_0_0_60px_10px_rgba(192,192,192,0.2),0_20px_60px_rgba(0,0,0,0.35)] sm:max-w-none sm:rounded-[34px] lg:rounded-[40px]"
             >
-            <div className="relative aspect-video overflow-hidden sm:h-[240px] sm:aspect-auto lg:h-[260px]">
+            <div className="relative aspect-video overflow-hidden sm:h-60 sm:aspect-auto lg:h-60">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -121,7 +121,7 @@ export default function CardProject() {
                 className="object-cover"
               />
             </div>
-            <div className="p-4 sm:p-6">
+            <div className="p-3 sm:p-6">
               <div className="mb-2 flex items-start justify-between gap-2 sm:mb-3 sm:gap-3">
                 <h3 className="min-w-0 text-base font-bold text-foreground transition-colors duration-300 sm:text-xl">
                   {project.title}

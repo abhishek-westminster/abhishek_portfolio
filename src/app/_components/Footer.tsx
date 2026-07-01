@@ -47,8 +47,8 @@ export default function Footer() {
   return (
     <footer className="bg-card text-muted-foreground border-t border-border">
       {/* Top footer */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-8 lg:gap-12">
           {/* Brand */}
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-foreground">
@@ -57,11 +57,11 @@ export default function Footer() {
             <p className="mt-3 sm:mt-4 text-base sm:text-lg text-foreground/80">
               UI/UX Designer &amp; Developer
             </p>
-            <p className="mt-6 sm:mt-8 max-w-md text-sm sm:text-base lg:text-lg leading-7 sm:leading-8">
+            <p className="mt-4 sm:mt-8 max-w-md text-sm sm:text-base lg:text-lg leading-7 sm:leading-8">
               Crafting beautiful, functional digital experiences that users love
               and businesses rely on.
             </p>
-            <div className="mt-6 sm:mt-8 flex items-center gap-2 text-sm sm:text-base lg:text-lg">
+            <div className="mt-4 sm:mt-8 flex items-center gap-2 text-sm sm:text-base lg:text-lg">
               <MapPin className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               <span>Kathmandu, Nepal</span>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
             <h3 className="text-lg sm:text-xl font-bold text-foreground">
               Navigation
             </h3>
-            <ul className="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
+            <ul className="mt-4 sm:mt-8 space-y-3 sm:space-y-5">
               {footerNavLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -91,7 +91,7 @@ export default function Footer() {
             <h3 className="text-lg sm:text-xl font-bold text-foreground">
               Connect
             </h3>
-            <ul className="mt-6 sm:mt-8 space-y-4 sm:space-y-5">
+            <ul className="mt-4 sm:mt-8 space-y-3 sm:space-y-5">
               {socialLinks.map((social) => (
                 <li key={social.label}>
                   <a
@@ -115,7 +115,7 @@ export default function Footer() {
 
       {/* Bottom footer */}
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:gap-6 px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:gap-6 px-4 sm:px-6 lg:px-8 py-4 sm:py-8 md:flex-row md:items-center md:justify-between">
           <p className="text-sm sm:text-base">
             © 2026 Abhishek Mandal. All rights reserved.
           </p>
