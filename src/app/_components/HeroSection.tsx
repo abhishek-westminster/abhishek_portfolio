@@ -70,7 +70,7 @@ export default function HeroSection() {
           <Image
             width={1024}
             height={1536}
-            className="aspect-square w-full max-w-180px rounded-3xl object-cover min-380px:max-w-y210px sm:max-w-300px lg:max-w-400px"
+            className="aspect-square w-full max-w-[180px] rounded-3xl object-cover min-[380px]:max-w-[210px] sm:max-w-[300px] lg:max-w-[400px]"
             src="/abhishek.png"
             alt="Abhishek Mandal - Frontend Developer"
             priority
