@@ -12,7 +12,7 @@ export default function About() {
       <div className="w-full bg-background py-10 sm:py-12 md:py-20">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 py-6 sm:px-6 md:gap-10 md:px-8 md:py-16 lg:flex-row">
           <div className="flex w-full justify-center lg:w-1/2 lg:justify-start">
-            <div className="aspect-square w-full max-w-[240px] overflow-hidden rounded-3xl sm:max-w-[320px] lg:max-w-[400px]">
+            <div className="aspect-square w-full max-w-60 overflow-hidden rounded-3xl sm:max-w-80 lg:max-w-[400px]">
               <Image
                 width={1024}
                 height={1536}

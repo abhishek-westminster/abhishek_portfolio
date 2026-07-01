@@ -23,7 +23,7 @@ export default function HeroSection() {
             Available for new projects
           </span>
 
-          <h1 className="flex min-w-0 flex-col gap-1 break-words font-bold leading-tight text-foreground text-[clamp(1.75rem,8vw,2.25rem)] sm:text-4xl lg:text-5xl xl:text-6xl">
+          <h1 className="flex min-w-0 flex-col gap-1 text-balance font-bold leading-tight text-foreground text-[clamp(1.75rem,8vw,2.25rem)] sm:text-4xl lg:text-5xl xl:text-6xl">
             <span>Hello, I&apos;m</span>
             <span className="text-[#F2B75F] leading-[0.98] text-[clamp(2.15rem,10.5vw,3rem)] sm:text-5xl lg:text-6xl xl:text-7xl">
               Abhishek Mandal
@@ -70,7 +70,7 @@ export default function HeroSection() {
           <Image
             width={1024}
             height={1536}
-            className="aspect-square w-full max-w-[180px] rounded-3xl object-cover min-[380px]:max-w-[210px] sm:max-w-[300px] lg:max-w-[400px]"
+            className="aspect-square w-full max-w-180px rounded-3xl object-cover min-380px:max-w-y210px sm:max-w-300px lg:max-w-400px"
             src="/abhishek.png"
             alt="Abhishek Mandal - Frontend Developer"
             priority
